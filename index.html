@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome</title>
+<style>
+  body {
+    background-color: #000;
+    color: #00ff00;
+    font-family: monospace;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  .prompt {
+    color: #00ff00;
+  }
+  .input {
+    color: #fff;
+    outline: none;
+    border: none;
+    background: transparent;
+    font-family: monospace;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    vertical-align: baseline;
+  }
+  p {
+    text-align: center; /* Align text to center */
+  }
+  h1 {
+      text-align: center; /* Align text to center */
+  }
+</style>
+</head>
+<body>
+<h1>Welcome</h1>
+<p>Hello and welcome!</p>
+<p1>Check check check</p1>
+<div id="console"></div>
+<script>
+  function writeToConsole(text) {
+    const consoleDiv = document.getElementById('console');
+    consoleDiv.innerHTML += '<div><span class="prompt">C:\\&gt;</span> ' + text + '</div>';
+  }
+
+  function processCommand(command) {
+    switch (command.toLowerCase().trim()) {
+      case 'help':
+        writeToConsole('Commands available: help, about, contact');
+        break;
+      case 'about':
+        writeToConsole('This is a DOS-like web page.');
+        break;
+      case 'contact':
+        writeToConsole('You can contact us at contact@example.com.');
+        break;
+      default:
+        writeToConsole('Command not recognized. Type "help" for available commands.');
+    }
+  }
+
+  document.addEventListener('keydown', function(event) {
+    if (event.keyCode === 13) {
+      const inputElement = document.createElement('input');
+      inputElement.setAttribute('class', 'input');
+      document.getElementById('console').appendChild(inputElement);
+      inputElement.focus();
+      inputElement.addEventListener('blur', function() {
+        processCommand(inputElement.value);
+        inputElement.parentNode.removeChild(inputElement);
+      });
+    }
+  });
+</script>
+</body>
+</html>
