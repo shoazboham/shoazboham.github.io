@@ -15,22 +15,7 @@
     padding: 0;
     overflow: hidden;
   }
-  .prompt {
-    color: #00ff00;
-  }
-  .input {
-    color: #fff;
-    outline: none;
-    border: none;
-    background: transparent;
-    font-family: monospace;
-    font-size: 14px;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    display: inline-block;
-    vertical-align: baseline;
-  }
+  
   p {
     text-align: center; /* Align text to center */
   }
@@ -62,41 +47,6 @@
 <a href="./about.html"><h3>About</h3>
 </a>
 <!--This is a comment. Comments are not displayed in the browser-->
-<div id="console"></div>
-<script>
-  function writeToConsole(text) {
-    const consoleDiv = document.getElementById('console');
-    consoleDiv.innerHTML += '<div><span class="prompt">C:\\&gt;</span> ' + text + '</div>';
-  }
 
-  function processCommand(command) {
-    switch (command.toLowerCase().trim()) {
-      case 'help':
-        writeToConsole('Commands available: help, about, contact');
-        break;
-      case 'about':
-        writeToConsole('This is a DOS-like web page.');
-        break;
-      case 'contact':
-        writeToConsole('You can contact us at contact@example.com.');
-        break;
-      default:
-        writeToConsole('Command not recognized. Type "help" for available commands.');
-    }
-  }
-
-  document.addEventListener('keydown', function(event) {
-    if (event.keyCode === 13) {
-      const inputElement = document.createElement('input');
-      inputElement.setAttribute('class', 'input');
-      document.getElementById('console').appendChild(inputElement);
-      inputElement.focus();
-      inputElement.addEventListener('blur', function() {
-        processCommand(inputElement.value);
-        inputElement.parentNode.removeChild(inputElement);
-      });
-    }
-  });
-</script>
 </body>
 </html>
