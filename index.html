@@ -1,57 +1,129 @@
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>&#11226;</title>
-<style>
-  body {
-    background-color: #000;
-    color: #00ff00;
-    font-family: monospace;
-    font-size: 14px;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-  }
-  
-  p {
-    text-align: center; /* Align text to center */
-  }
-  h1 {
-      text-align: center; /* Align text to center */
-  }
- h3 {
-      text-align: center; /* Align text to center */
-      color: #0000ff;
-  }
-.center {
-  border: 5px solid;
-  margin: auto;
-  width: 50%;
-  padding: 10px;
+<html><head>
+
+    <title>Boaz Shoham</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+   <style>
+    body {
+  color: #000000;
+  background-color: #b49478;
+  font-family: monospace;
+  max-width: 960px;
+  margin: 1rem auto;
+  padding: 0 1rem;
 }
 
+h1 {
+  /*font-size: x-large;*/
+  font-weight: bold;
+  text-align: center;
+}
 
+section h1 { border-top: 2px dotted rgb(124,88,68); text-align: center; position: relative; margin: 1.75rem 0 0; }
+section h1 span { position: relative; top: -.7em; background: rgb(179,147,120); display: inline-block; padding: 0 1rem; }
+
+
+img#logo {
+  margin: 1rem auto;
+  display: block;
+}
+
+section div {
+  color: #e8e8c8;
+  background-color: #000000;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #7c5844 #e8e8c8 #e8e8c8 #7c5844;
+  margin: auto;
+  padding: 1rem;
+}
+
+section div :first-child {
+  margin-top: 0;
+}
+
+section div :last-child {
+  margin-bottom: 0;
+}
+
+a {
+  color: #fcfc54;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+code, pre {
+  font: inherit;
+  color: #449848;
+  margin: 1rem;
+}
 </style>
-</head>
-<body>
-<header>
-<h1>Welcome</h1>
-<div> 
-<p>Hello and welcome!</p>
-</div>
-</header>
-<main>
-<div class="center"><p1>Check check check</p1></div>
-<div><img src="satan.jpeg" alt="S A T A N" width="500" height="600" align=center></div>
-<h2>check out more</h2>
-</main>
+    <link rel="icon" href="icon.png">
+
+</head><body>
+
+    <img id="logo" width="290" height="50" alt="logo png" src="logo.png">
+
+    <section>
+        <h1><span>Overview</span></h1>
+        <div>
+            <p>
+                <b>Boaz Shoham</b> is my name and open-source audio visual curiousity is my game <a
+                href="https://www.youtube.com/channel/UC4aMDGaM3WW2ZKuDZopvNBw">For example</a>
+                and <a href="https://rijikulous.bandcamp.com/music">Another example.</a>
+                
+            </p>
+            <p> 
+                QA worker by day, tracker (and vcv addict) by night
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <h1><span>ME ME ME</span></h1>
+        <div>
+            <p><strong>
+                Spot light release:
+                <a href="https://rijikulous.bandcamp.com/track/what-goes-up-must-come-down-2">From the album: 'in a carmeliya state of mind'</a>
+            </strong></p>
+
+            <ul><li>
+                <a href="https://www.youtube.com/watch?v=mdWmQQj2nEE">Launch Break Experiments</a>
+            </li><li>
+                <a href="https://www.youtube.com/watch?v=KKo9_E577tA">VCV Rack Shenanigans</a>
+            </li><li>
+                <a href="https://www.youtube.com/watch?v=OjgcloWVD-c">VCV Rack Shenanigans #2 - Rampaging Nysthi</a>
+            </li><li>
+                <a href="https://www.youtube.com/watch?v=7_4avEcGHLw">Rijikulous - Peakbasson</a>
+            </li><li>
+                <a href="https://rijikulous.bandcamp.com/album/no-input-mixing">No input mixxing</a>
+            </li><li>
+                <a href="https://rijikulous.bandcamp.com/album/carmelit-field-recordings-1">Field recording - Carmelit (Haifa)</a>
+        </div>
+    </section>
+
+    <section>
+        <h1><span>Development</span></h1>
+        <div>
+            <p>
+                Currently building 6 eurorack modules and starting to work on a VC-Radio module
+            </p>
+            <p><code>will update as develop start</code></p>
+            <p>
+                Another project brewing is a quad sound system based on 8 'speaker exciters'
+            </p>
+            <p>
+                3rd project on the horizon: weareable devices that react with the surrondings - more on that here<a
+                href="https://github.com/schismtracker/schismtracker/blob/master/docs/building_on_windows.md"><code>Wearable devices</code></a>
+            </p>
+        </div>
+    </section>
 <footer><a href="./about.html"><h3>About</h3>
 </a>
 </footer>
-<!--This is a comment. Comments are not displayed in the browser-->
-
-</body>
-</html>
+</body></html>
